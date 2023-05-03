@@ -82,12 +82,119 @@ body{
     color: #fff;
 }
 
-
-    /* .main */
-.main{}
-
 /* .slide */
-.slide{}
+.slider{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide .item img{
+    display: block;
+}
+
+
+/* .contents */
+.contents{
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.tab {
+    flex: 1;
+    /* background-color: aqua; */
+    position: relative;
+}
+
+.tab_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.tab_title h2{
+    flex: 1;
+}
+
+.tab_title a {
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #eee;
+}
+
+.tab_title a.on {
+    background-color: tomato;
+    color: #fff;
+}
+
+.tab_title::after {
+    content: '';
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: tomato;
+}
+
+.tab_contents {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+}
+.tab_contents .notice {}
+
+.tab_contents .notice a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px 6px;
+}
+
+.tab_contents .gallery {
+    display: flex;
+    /* background-color: red; */
+    gap: 12px;
+    height: 100%;
+    padding: 10px 10px 0 10px;
+    display: none;
+}
+.tab_contents .gallery li {
+    width: 100%;
+}
+
+.tab_contents .gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.banner{
+    flex: 1;
+    background-color: red;
+}
+
+.link{
+    flex: 1;
+    background-color: yellow
+}
+
 
 /* .footer */
 .footer{}
